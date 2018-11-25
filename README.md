@@ -21,7 +21,7 @@ The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to t
 
 ## Wiring
 
-<img src="https://raw.githubusercontent.com/spielhuus/LoRa-Environmental-Sensors/master/schema.png" width="15%"></img>
+<img src="https://raw.githubusercontent.com/spielhuus/LoRa-Environmental-Sensors/master/schema.png" width="30%"/>
 
 | HopeRF RFM95 LoRa transceiver module |	ATmega8 Pin |   |	   	HopeRF RFM95 LoRa transceiver module |	ATmega8 Pin |
 | ----- | ---- | --- | ---- | ---- |
