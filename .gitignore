@@ -1,0 +1,5 @@
+*.bak
+*-bak
+fp-lib-table
+*-cache.lib
+sym-lib-table
