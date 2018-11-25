@@ -12,7 +12,8 @@ The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to t
 
 |Ref|Value|Description|
 | --- | --- | --- | 
-|BT1| [3034](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/3034.pdf) |[Battery Cell Holder|3034 1x20mm](https://www.keyelco.com/product.cfm/product_id/798)| 
+|BT1| [3034](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/3034.pdf) |Battery Cell Holder|3034 1x20mm](https://www.keyelco.com/product.cfm/product_id/798)| 
+|BT1| [CR2032]() |Battery Cell CR2032 (210 – 230 mAh)| 
 |U1| [BME280](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/BST-BME280_DS001-10.pdf) | [SparkFun BME280](https://github.com/sparkfun/SparkFun_BME280_Breakout_Board)|
 |U2| [ATtiny85-20SU](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf) | Atmel 8-bit AVR Microcontroller|
 |U3| [RFM95W-868S2](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/RFM95_96_97_98W.pdf) | Low Power Long Range Transceiver Module |
