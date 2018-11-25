@@ -17,7 +17,7 @@ Arduino based board for a Atmospheric Sensor BME280 LoRaWan Node. The LoRa Node 
 |U3| [RFM95W-868S2](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/RFM95_96_97_98W.pdf) | Low Power Long Range Transceiver Module |
 | - | Wire | Wire for the antenna, 8.6 cm |
 
-The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to the blank chip see [1]
+The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to the blank chip see [2]
 
 ## Wiring
 
@@ -102,6 +102,7 @@ function Decoder(bytes, port) {
 ## Links
 
 1. [TinyLoRa-BME280 v1.1](https://github.com/ClemensRiederer/TinyLoRa-BME280_v1.1)
+2. [Programming ATtiny85 with Arduino Uno](https://www.hackster.io/arjun/programming-attiny85-with-arduino-uno-afb829)
 
 ## License
 
