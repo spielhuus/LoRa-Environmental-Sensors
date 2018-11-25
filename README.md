@@ -10,12 +10,13 @@ The Board is using the ATmega328 processor, the Hope RFM96W Lora Module and the 
 
 The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to the blank chip see [1]
 
-|Ref|Value|Footprint|Datasheet|Manufacturer|Vendor|
-| --- | --- | --- | --- | --- | --- |
-|BT1|Battery_Cell|Battery:BatteryHolder_Keystone_3034_1x20mm| | | |
-|U1|BME280BreakoutBoard|Sparkfun BME280:Sparkfun bme280| | | |
-|U2|ATtiny85-20SU|Package_DIP:DIP-8_W7.62mm_Socket|http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf| | | |
-|U3|RFM95W-868S2|RF_Module:HOPERF_RFM9XW_SMD|http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf| | | |
+|Ref|Value|Description|
+| --- | --- | --- | 
+|BT1| [3034](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/3034.pdf) |[Battery Cell Holder|3034 1x20mm](https://www.keyelco.com/product.cfm/product_id/798)| 
+|U1| [BME280](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/BST-BME280_DS001-10.pdf) | [SparkFun BME280](https://github.com/sparkfun/SparkFun_BME280_Breakout_Board)|
+|U2| [ATtiny85-20SU](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf) | Atmel 8-bit AVR Microcontroller|
+|U3| [RFM95W-868S2](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/RFM95_96_97_98W.pdf) | Low Power Long Range Transceiver Module |
+| - | Wire | Wire for the antenna, 8.6 cm |
 
 ## Wiring
 
