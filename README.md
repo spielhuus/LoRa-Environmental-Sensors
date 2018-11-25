@@ -36,7 +36,7 @@ The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to t
 
 ## Installation
 
-The Arduino IDE has to be properly installed installed. 
+The Arduino IDE has to be properly installed. 
 
 Add the Libraries to you IDE:
 
@@ -56,7 +56,7 @@ Add the Libraries to you IDE:
 
 - Burn the sketch to the Chip using an Arduino UNO [2]
   - Burn a bootloader first to set the fuses correctly
-  
+
 ## Payload Format
 
 The Payload is encoded as byte array.
