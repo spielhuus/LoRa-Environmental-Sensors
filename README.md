@@ -3,12 +3,10 @@
 
 <img src="https://raw.githubusercontent.com/spielhuus/sensors/master/atmega328-sensor/schema.png" width="15%"></img> <img src="https://raw.githubusercontent.com/spielhuus/sensors/master/atmega328-sensor/ATmega328.png" width="15%"></img> <!-- img src="https://cloud.githubusercontent.com/assets/4307137/10105284/26aa7ad4-63ae-11e5-88b7-bc523a095c9f.png" width="15%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105288/28698fae-63ae-11e5-8ba7-a62360a8e8a7.png" width="15%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105283/251b6868-63ae-11e5-9918-b789d9d682ec.png" width="15%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105290/2a183f3a-63ae-11e5-9380-50d9f6d8afd6.png" width="15%"></img --> 
 
-This Sensor can run of a battery and measures temperature, humidity and barometric pressure and send the data to TTN. 
-The Board is using the ATmega328 processor, the Hope RFM96W Lora Module and the BME280 barometric pressure sensor. 
+
+Arduino based board for a Atmospheric Sensor BME280 LoRaWan Node. The LoRa Node measures barometric pressure, humidity, and temperature every 5 min. After the measurements, the ATtiny85 goes into sleep mode and is awakened by the watchdog timer. The RFM module sends the values to the TTN backend with Activation by Personalization (ABP) a fixed spreading factor and one of the four random channels. This project is based on the TinyLoRa-BME280 Project [1].
 
 ## BOM
-
-The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to the blank chip see [1]
 
 |Ref|Value|Description|
 | --- | --- | --- | 
@@ -18,6 +16,8 @@ The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to t
 |U2| [ATtiny85-20SU](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf) | Atmel 8-bit AVR Microcontroller|
 |U3| [RFM95W-868S2](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/RFM95_96_97_98W.pdf) | Low Power Long Range Transceiver Module |
 | - | Wire | Wire for the antenna, 8.6 cm |
+
+The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to the blank chip see [1]
 
 ## Wiring
 
@@ -99,13 +99,11 @@ function Decoder(bytes, port) {
 }
 ```
 
-## Datasheets
-
-- [ATmega328/P](http://ww1.microchip.com/downloads/en/devicedoc/atmel-42735-8-bit-avr-microcontroller-atmega328-328p_datasheet.pdf)
-- [Bosch BME280](https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS002.pdf)
-- [RFM95/96/97/98(W) - Low Power Long Range Transceiver Module](http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf)
-
 ## Links
 
 1. [TinyLoRa-BME280 v1.1](https://github.com/ClemensRiederer/TinyLoRa-BME280_v1.1)
+
+## License
+
+[License CC BY 4.0](http://creativecommons.org/licenses/by/4.0/) - Attribution 4.0 International
 
