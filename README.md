@@ -34,42 +34,29 @@ The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to t
 | DIO1 |	PD3 (5) |   | 	MISO |	PB4 (18) |
 | DIO2 |	- 	  |   | 	GND |	- |
 
-## Prepare the Arduino IDE
+## Installation
 
-I asume the arduino IDE is already installed. 
+The Arduino IDE has to be properly installed installed. 
 
 Add the Libraries to you IDE:
 
-- Within the IDE Libarary Manager Install the BME280 Library by Tyler Glenn.
-- Install the lmic library as ZIP file.
-  - Download the arduino-lmic library as zip file from: https://github.com/matthijskooijman/arduino-lmic
-  - Install the arduino-lmic-master.zip in the Arduino IDE:
-    Select menu: Sketch | Include Library | Add .Zip Library 
-- Make the following changes in ./arduino-lmic-master/src/lmic/config.h:
-  - If you live in Europe, set: #define CFG_eu868 1
-  - If you use a HopeRF RFM95 module, set: #define CFG_sx1276_radio 1
-  - If you want logging in the serial monitor, set:
-    - #define LMIC_DEBUG_LEVEL 2
-    - #define LMIC_FAILURE_TO Serial
-  - Uncomment line: #define DISABLE_PING
-    Disable this feature. It is not needed and space is freed up.
-  - Uncomment line: #define DISABLE_BEACONS
+- Install the Attiny Baord Manager
+  - Under Preferences > Additional Boards Manager URLs: https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json
 
-    Disable this feature. It is not needed and space is freed up.
+  Multiple managers can be separated with a comma.
 
-## Installation
+- Install TinyLoRa-BME280 v1.1
+  - Download the ZIP archive from [TinyLoRa-BME280 v1.1](https://github.com/ClemensRiederer/TinyLoRa-BME280_v1.1)
+  - Install the ZIP archive in the Arduino Library Manager
 
- the armega328-sensor.ino sketarduinofile  ch from this repository into the arduino ide. 
- Edit the keys from TTN in the sketch and change the PIN-Mappings:
+- Open Examples > TinyLoRa-BME280_v1.1-master > ATtiny_LoRa_BME280
+  - Edit NwkSkey, AppSkey, DevAddr
+  - Change the Spreading Factor in ATtinyLoRa.cpp
+  - The Sleep time can be set with the SLEEP_TOTAL var.
 
-```
-const lmic_pinmap lmic_pins = {
-  .nss = 10,                       // chip select on feather (rf95module) CS
-  .rxtx = LMIC_UNUSED_PIN,
-  .rst = 5,                       // reset pin
-  .dio = {2, 3, LMIC_UNUSED_PIN}, // assumes external jumpers [feather_lora_jumper]
-```
-
+- Burn the sketch to the Chip using an Arduino UNO [2]
+  - Burn a bootloader first to set the fuses correctly
+  
 ## Payload Format
 
 The Payload is encoded as byte array.
