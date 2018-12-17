@@ -14,19 +14,33 @@ e=0.01;
 ri=(r>th)?r-th:e;	// needed for the cover - needs to be larger than 0 for proper results
 l=li-2*r;
 w=wi-2*r;
+vents=floor((wi-(2*r+2)) / 3 * r);
+vent_border=(wi-(vents*3))/2;
 
 module box(){
+        
 	difference(){
 		translate([0,0,-th])hull(){
 			for (i=[[-w/2,-l/2],[-w/2,l/2],[w/2,-l/2],[w/2,l/2]]){
-				translate(i)cylinder(r=r+th,h=h+th,$fn=16*r);
+				translate(i)cylinder(r=r+th,h=h+th,$fn=100*r);
 			}
 		}
 		hull(){
 			for (i=[[-w/2,-l/2],[-w/2,l/2,],[w/2,-l/2],[w/2,l/2]]){
-				translate(i)cylinder(r=r,h=h,$fn=16*r);
+				translate(i)cylinder(r=r,h=h,$fn=100*r);
 			}
 		}
+        
+        //create the vent
+        for (i = [0:vents]){
+         translate([(wi-r)/2-vent_border-i*3,2,-1])
+         cube([1, w, r]);
+            
+         translate([(wi-r)/2-vent_border-i*3,l/2+r,-1])
+         cube([1, 1, h-5]);
+        }
+
+        //create snap
 		translate([-w/2,l/2+r,h-2])rotate([0,90,0])cylinder(d=1.2,h=w,$fn=12);
 		translate([-w/2,-l/2-r,h-2])rotate([0,90,0])cylinder(d=1.2,h=w,$fn=12);
 		translate([w/2+r,l/2,h-2])rotate([90,0,0])cylinder(d=1.2,h=l,$fn=12);
@@ -48,21 +62,21 @@ module box(){
 module cover(){
 	translate([0,0,-th])hull(){
 		for (i=[[-w/2,-l/2],[-w/2,l/2],[w/2,-l/2],[w/2,l/2]]){
-			translate(i)cylinder(r=r+th,h=th,$fn=16*r);
+			translate(i)cylinder(r=r+th,h=th,$fn=100*r);
 		}
 	}
 	difference(){
 		translate([0,0,-th])hull(){
 			for (i=[[-w/2,-l/2],[-w/2,l/2],[w/2,-l/2],[w/2,l/2]]){
-				translate(i)cylinder(r=r,h=th+3,$fn=16*r);
+				translate(i)cylinder(r=r,h=th+3,$fn=100*r);
 			}
 		}
 		hull(){
 			for (i=[[-w/2,-l/2],[-w/2,l/2],[w/2,-l/2],[w/2,l/2]]){
 				if (r>th){
-					translate(i)cylinder(r=r-th,h=3,$fn=16*r);
+					translate(i)cylinder(r=r-th,h=3,$fn=100*r);
 				}else{
-					translate(i)cylinder(r=e,h=3,$fn=16*r);
+					translate(i)cylinder(r=e,h=3,$fn=100*r);
 				}
 			}
 		}
@@ -75,18 +89,12 @@ module cover(){
 }
 
 module make_vents() {
-    set_vent(20,0,0,1,vent_l,8);
-    set_vent(16,0,0,1,vent_l,8);
-    set_vent(12,0,0,1,vent_l,8);
-    set_vent(8,0,0,1,vent_l,8);
-
-    set_vent(20,box_l-vent_l,0,1,vent_l,8);
-    set_vent(16,box_l-vent_l,0,1,vent_l,8);
-    set_vent(12,box_l-vent_l,0,1,vent_l,8);
-    set_vent(8,box_l-vent_l,0,1,vent_l,8);
+    for (i = [0:16]){
+   translate([i*5+w*0.08,l*0.08,-0.25])
+   cube([2, w, r+4]);
+ }
 }
 
 box();
-      make_vents();
 translate([0,li+3+2*th,0])
-	cover();
+cover();
