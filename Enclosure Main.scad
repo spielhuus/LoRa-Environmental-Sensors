@@ -18,6 +18,7 @@ vents=floor((wi-(2*r+2)) / 3 * r);
 vent_border=(wi-(vents*3))/2;
 
 module box(){
+
         
 	difference(){
 		translate([0,0,-th])hull(){
@@ -39,6 +40,9 @@ module box(){
          translate([(wi-r)/2-vent_border-i*3,l/2+r,-1])
          cube([1, 1, h-5]);
         }
+
+        //hole for antenna
+        translate([-wi/2+6, -li/2-1, 2]) rotate(a=[0,90,90]) cylinder([1, 10, 0], $fn=100);
 
         //create snap
 		translate([-w/2,l/2+r,h-2])rotate([0,90,0])cylinder(d=1.2,h=w,$fn=12);
