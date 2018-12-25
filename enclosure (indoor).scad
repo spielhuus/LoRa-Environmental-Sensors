@@ -9,7 +9,7 @@ board_w=25;
 board_l=50;
 board_h=2;
 
-lidText = "2";  // Text on lid    
+lidText = "3";  // Text on lid    
 lidTextSize = 20;   // Size of text on Lid
 lidTextFont = "Droid Sans:style=Bold";  // Font for lid text
 
