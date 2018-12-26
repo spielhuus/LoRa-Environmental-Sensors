@@ -4,24 +4,24 @@
 <a href="https://spielhuus.github.io/LoRa-Environmental-Sensors/final%20product.jpg"><img src="https://spielhuus.github.io/LoRa-Environmental-Sensors/final%20product.jpg" width="90%"></img></a>
 
 
-Arduino based board for a Atmospheric Sensor BME280 LoRaWan Node. The LoRa Node measures barometric pressure, humidity, and temperature every 5 min. After the measurements, the ATtiny85 goes into sleep mode and is awakened by the watchdog timer. The RFM module sends the values to the TTN backend with Activation by Personalization (ABP) a fixed spreading factor and one of the four random channels. This project is based on the TinyLoRa-BME280 Project [1].
+Arduino based board for a Atmospheric Sensor BME280 LoRaWan Node. The LoRa Node measures barometric pressure, humidity, and temperature every 5 min. After the measurements, the ATtiny85 goes into sleep mode and is awakened by the watchdog timer. The RFM module sends the values to the TTN backend with Activation by Personalization (ABP) a fixed spreading factor and one of the four random channels. This project is based on the TinyLoRa-BME280 project [1].
 
 ## BOM
 
 |Ref|Value|Description|
 | --- | --- | --- | 
-|BT1| [3034](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/3034.pdf) |Battery Cell Holder|3034 1x20mm](https://www.keyelco.com/product.cfm/product_id/798)| 
+|BT1| [3034](https://spielhuus.github.io/LoRa-Environmental-Sensors/3034.pdf) |Battery Cell Holder|3034 1x20mm](https://www.keyelco.com/product.cfm/product_id/798)| 
 |BT1| [CR2032]() |Battery Cell CR2032 (210 – 230 mAh)| 
-|U1| [BME280](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/BST-BME280_DS001-10.pdf) | [SparkFun BME280](https://github.com/sparkfun/SparkFun_BME280_Breakout_Board)|
-|U2| [ATtiny85-20SU](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf) | Atmel 8-bit AVR Microcontroller|
-|U3| [RFM95W-868S2](https://github.com/spielhuus/LoRa-Environmental-Sensors/blob/master/datasheets/RFM95_96_97_98W.pdf) | Low Power Long Range Transceiver Module |
+|U1| [BME280](https://spielhuus.github.io/LoRa-Environmental-Sensors/BST-BME280_DS001-10.pdf) | [SparkFun BME280](https://github.com/sparkfun/SparkFun_BME280_Breakout_Board)|
+|U2| [ATtiny85-20SU](https://spielhuus.github.io/LoRa-Environmental-Sensors/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf) | Atmel 8-bit AVR Microcontroller|
+|U3| [RFM95W-868S2](https://spielhuus.github.io/LoRa-Environmental-Sensors/RFM95_96_97_98W.pdf) | Low Power Long Range Transceiver Module |
 | - | Wire | Wire for the antenna, 8.6 cm |
 
 The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to the blank chip see [2]
 
 ## Wiring
 
-<img src="https://raw.githubusercontent.com/spielhuus/LoRa-Environmental-Sensors/master/schema.png" width="30%"/>
+<a href="https://spielhuus.github.io/LoRa-Environmental-Sensors/schema.png"><img src="https://spielhuus.github.io/LoRa-Environmental-Sensors/schema.png" width="30%"/></a>
 
 | HopeRF RFM95 LoRa transceiver module |	ATmega8 Pin |   |	   	HopeRF RFM95 LoRa transceiver module |	ATmega8 Pin |
 | ----- | ---- | --- | ---- | ---- |
