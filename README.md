@@ -30,8 +30,8 @@ The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to t
 | PB3 | | CS (Slave Select) | |
 | PB4 | NSS (Slave Select) | | |
 | PB2 | SCK | SCK | |
-| PB1(DO) | MOSI RFM95 | SDI | |
-| PB0(DI) | MISO RFM95 | SDO | | 
+| PB1(DO) | MOSI | SDI | |
+| PB0(DI) | MISO | SDO | | 
 
 ## Installation
 
