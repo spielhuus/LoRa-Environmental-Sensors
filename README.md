@@ -22,16 +22,13 @@ The ATmega microprocessor needs an arduino bootloader. To burn a bootloader to t
 ## Wiring
 
 <img src="https://spielhuus.github.io/LoRa-Environmental-Sensors/schema.png" width="30%"/>
-
-| ATtiny85 | RFM95 | BME280 | Breadboard |
-| -------- | ----- | ------ | ---------- |
-| VCC | | | VCC |
-| GND | | | GND |
-| PB3 | | CS (Slave Select) | |
-| PB4 | NSS (Slave Select) | | |
-| PB2 | SCK | SCK | |
-| PB1(DO) | MOSI | SDI | |
-| PB0(DI) | MISO | SDO | | 
+| ATtiny85 | RFM95 | BME280 |
+| -------- | ----- | ------ |
+| PB3 | | CS (Slave Select) |
+| PB4 | NSS (Slave Select) | |
+| PB2 | SCK | SCK |
+| PB1(DO) | MOSI | SDI |
+| PB0(DI) | MISO | SDO |
 
 ## Installation
 
