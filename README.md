@@ -1,7 +1,7 @@
 # LoRa Environmental Sensors 
 
 
-<a href="https://spielhuus.github.io/LoRa-Environmental-Sensors/final%20product.jpg"><img src="https://spielhuus.github.io/LoRa-Environmental-Sensors/final%20product.jpg" width="90%"></img></a>
+<img src="https://spielhuus.github.io/LoRa-Environmental-Sensors/final%20product.jpg" width="100%"></img>
 
 
 Arduino based board for a Atmospheric Sensor BME280 LoRaWan Node. The LoRa Node measures barometric pressure, humidity, and temperature every 5 min. After the measurements, the ATtiny85 goes into sleep mode and is awakened by the watchdog timer. The RFM module sends the values to the TTN backend with Activation by Personalization (ABP) a fixed spreading factor and one of the four random channels. This project is based on the TinyLoRa-BME280 project [1].
